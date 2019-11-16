@@ -1,52 +1,501 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-	<meta name="generator" content="Hugo 0.55.5" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+<html lang="en-us">
+	<head>
+			<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ian Ashmore</title>
+		<meta name="description" content="Ian Ashmore&#39;s page(s)" />
+		<meta name="keywords" content="Ian Ashmore, author, writer, playwright, plays, short stories, novels, Heaven Inc, Over(net)worked, Overnetworked, Aesop and Godot&#39;s, Hostage" />
+		<meta name="author" content="Ian Ashmore" />
+		<link rel="icon" href="favicon.ico" />
+		<meta name="generator" content="Hugo 0.58.2" />
+		<style>
+		body {
+		background: #f9f9f9;
+		color: ;
+		}
+		</style>
+		<link rel="stylesheet" type="text/css" href="https://ianashmore.comcss/default.css" />
+		<link rel="stylesheet" type="text/css" href="https://ianashmore.comcss/component.css" />
+		
+			<link rel="stylesheet" href="css/footer.css">
+		
+		<script src="https://ianashmore.comjs/modernizr.custom.js"></script>
 
-    <title>
-            
-    </title>
+	</head>
+	<body>
+		<div class="container">
+							<header class="clearfix">
+				<h1>Ian Ashmore<span>What has Ian Ashmore been up to?</span></h1>
+			</header>
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					
+					<li>
+						<a href="https://cafelitcreativecafe.blogspot.com/2019/11/aesop-and-godots.html" data-largesrc="images/full/aesop_and_godots.png" data-title="Aesop and Godot&#39;s" data-description="What would you tell yourself if you had the hindsight of 25 years? What would you want to know about your own future? What do you think your younger self would think of the way your life has turned out? In Aesop and Godot&#39;s a woman has a chance encounter with her former and future selves.&lt;/br&gt;&lt;/br&gt;Aesop and Godot&#39;s was first published on CaféLit." data-buttontext="">
+							<img src="images/thumbs/aesop_and_godots.png" alt="Aesop and Godot&#39;s (2019)"/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="https://issuu.com/theparagonjournal/docs/paragon_journal_issue_17/25" data-largesrc="images/full/overnetworked.png" data-title="Over(net)worked" data-description="Matt is a gadget aficionado. He spends most of his time developing his corner of the Internet of Things: a world in which every electronic trinket can talk to any other gizmo in the network. Matt has invited Sarah, an artificial intelligence, to live with Jenny and him. Jenny is not quite amused and finds herself torn between Matt and her desire for privacy. The Things, Matt&#39;s gadgets, conspire to drive Matt insane for the simple reason that they can and there is no one to stop them.&lt;/br&gt;&lt;/br&gt;An excerpt of the full-length play Over(net)worked was published in The Paragon Journal." data-buttontext="">
+							<img src="images/thumbs/overnetworked.png" alt="Over(net)worked (2018)"/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="" data-largesrc="images/full/heaven_inc.png" data-title="Heaven, Inc." data-description="Heaven is in a pretty pickle: public confidence in Geoff&#39;s ability to turn the company around is all but gone. Once-loyal customers are jumping ship in droves. His son Jerrold&#39;s influence has waned and he isn&#39;t too keen on returning to HQ for another PR campaign. There is only one person left who can help Geoff: Lucy. She may be the competition but she is also a businesswoman who knows a good deal when she sees it, and this one is almost too good to be true.&lt;/br&gt;&lt;/br&gt;Heaven, Inc. is a full-length play that answers the question: What would happen if heaven were to be run as a company seeking profit rather than providing a paradise?" data-buttontext="">
+							<img src="images/thumbs/heaven_inc.png" alt="Heaven, Inc. (2016)"/>
+						</a>
+					</li>
+					
+				</ul>
+				<footer class="footer">
+	<p>&copy; 2016&ndash;2019 Ian Ashmore.</br></br>Please note that not all writing is available online.</br>If you are interested in any writing that has not been published in full or at all (e.g. for stage dramatization or print publication), <a href="mailto:author@ianashmore.com">please send an email to the author</a>.</br>No social media!<p>
+</footer>
+			</div>
+		</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			var $event = $.event,
+			$special,
+			resizeTimeout;
 
-    
-    <link rel="stylesheet" href="/css/style.css">
+			$special = $event.special.debouncedresize = {
+				setup: function() {
+					$( this ).on( "resize", $special.handler );
+				},
+				teardown: function() {
+					$( this ).off( "resize", $special.handler );
+				},
+				handler: function( event, execAsap ) {
+					var context = this,
+						args = arguments,
+						dispatch = function() {
+							event.type = "debouncedresize";
+							$event.dispatch.apply( context, args );
+						};
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+					if ( resizeTimeout ) {
+						clearTimeout( resizeTimeout );
+					}
 
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+					execAsap ?
+						dispatch() :
+						resizeTimeout = setTimeout( dispatch, $special.threshold );
+				},
+				threshold: 250
+			};
 
-    
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="" />
+			var BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
-    
-        
-    
-</head>
-<body>
+			$.fn.imagesLoaded = function( callback ) {
+				var $this = this,
+					deferred = $.isFunction($.Deferred) ? $.Deferred() : 0,
+					hasNotify = $.isFunction(deferred.notify),
+					$images = $this.find('img').add( $this.filter('img') ),
+					loaded = [],
+					proper = [],
+					broken = [];
 
-<main>
-    <div class="column left">
-        <img src="images/portrait.jpg" class="portrait" alt="Portrait" />
-    </div>
-    <div class="column right"><h1>Welcome</h1><h2>I am Ian Ashmore.</h2>
-        <p></p>
-        
-        <div class="links"><a rel="me" href="mailto:author@ianashmore.com" title="E-mail">
-                    <span class="fas fa-envelope"></span>
-                </a></div>
-    </div>
-</main>
+				if ($.isPlainObject(callback)) {
+					$.each(callback, function (key, value) {
+						if (key === 'callback') {
+							callback = value;
+						} else if (deferred) {
+							deferred[key](value);
+						}
+					});
+				}
 
-<footer>
-    <div class="column"></div>
-    <div class="column">
-        No social media!
-    </div>
-</footer></body>
+				function doneLoading() {
+					var $proper = $(proper),
+						$broken = $(broken);
+
+					if ( deferred ) {
+						if ( broken.length ) {
+							deferred.reject( $images, $proper, $broken );
+						} else {
+							deferred.resolve( $images );
+						}
+					}
+
+					if ( $.isFunction( callback ) ) {
+						callback.call( $this, $images, $proper, $broken );
+					}
+				}
+
+				function imgLoaded( img, isBroken ) {
+					if ( img.src === BLANK || $.inArray( img, loaded ) !== -1 ) {
+						return;
+					}
+
+					loaded.push( img );
+
+					if ( isBroken ) {
+						broken.push( img );
+					} else {
+						proper.push( img );
+					}
+
+					$.data( img, 'imagesLoaded', { isBroken: isBroken, src: img.src } );
+
+					if ( hasNotify ) {
+						deferred.notifyWith( $(img), [ isBroken, $images, $(proper), $(broken) ] );
+					}
+
+					if ( $images.length === loaded.length ){
+						setTimeout( doneLoading );
+						$images.unbind( '.imagesLoaded' );
+					}
+				}
+
+				if ( !$images.length ) {
+					doneLoading();
+				} else {
+					$images.bind( 'load.imagesLoaded error.imagesLoaded', function( event ){
+						imgLoaded( event.target, event.type === 'error' );
+					}).each( function( i, el ) {
+						var src = el.src;
+
+						var cached = $.data( el, 'imagesLoaded' );
+						if ( cached && cached.src === src ) {
+							imgLoaded( el, cached.isBroken );
+							return;
+						}
+
+						if ( el.complete && el.naturalWidth !== undefined ) {
+							imgLoaded( el, el.naturalWidth === 0 || el.naturalHeight === 0 );
+							return;
+						}
+
+						if ( el.readyState || el.complete ) {
+							el.src = BLANK;
+							el.src = src;
+						}
+					});
+				}
+
+				return deferred ? deferred.promise( $this ) : $this;
+			};
+
+			var Grid = (function() {
+
+				var $grid = $( '*#og-grid' ),
+					$items = $grid.children( 'li' ),
+					current = -1,
+					previewPos = -1,
+					scrollExtra = 0,
+					marginExpanded = 10,
+					$window = $( window ), winsize,
+					$body = $( 'html, body' ),
+					transEndEventNames = {
+						'WebkitTransition' : 'webkitTransitionEnd',
+						'MozTransition' : 'transitionend',
+						'OTransition' : 'oTransitionEnd',
+						'msTransition' : 'MSTransitionEnd',
+						'transition' : 'transitionend'
+					},
+					transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+					support = Modernizr.csstransitions,
+					settings = {
+						minHeight : 500,
+						speed : 350,
+						easing : 'ease'
+					};
+
+				function init( config ) {
+					
+					settings = $.extend( true, {}, settings, config );
+
+					$grid.imagesLoaded( function() {
+
+						saveItemInfo( true );
+						getWinSize();
+						initEvents();
+
+					} );
+
+				}
+
+				function addItems( $newitems ) {
+
+					$items = $items.add( $newitems );
+
+					$newitems.each( function() {
+						var $item = $( this );
+						$item.data( {
+							offsetTop : $item.offset().top,
+							height : $item.height()
+						} );
+					} );
+
+					initItemsEvents( $newitems );
+
+				}
+
+				function saveItemInfo( saveheight ) {
+					$items.each( function() {
+						var $item = $( this );
+						$item.data( 'offsetTop', $item.offset().top );
+						if( saveheight ) {
+							$item.data( 'height', $item.height() );
+						}
+					} );
+				}
+
+				function initEvents() {
+					
+					initItemsEvents( $items );
+					
+					$window.on( 'debouncedresize', function() {
+						
+						scrollExtra = 0;
+						previewPos = -1;
+						saveItemInfo();
+						getWinSize();
+						var preview = $.data( this, 'preview' );
+						if( typeof preview != 'undefined' ) {
+							hidePreview();
+						}
+
+					} );
+
+				}
+
+				function initItemsEvents( $items ) {
+					$items.on( 'click', 'span.og-close', function() {
+						hidePreview();
+						return false;
+					} ).children( 'a' ).on( 'click', function(e) {
+
+						var $item = $( this ).parent();
+						current === Array.from($items).findIndex(d => d == $item[0]) ? hidePreview() : showPreview( $item );
+						return false;
+
+					} );
+				}
+
+				function getWinSize() {
+					winsize = { width : $window.width(), height : $window.height() };
+				}
+
+				function showPreview( $item ) {
+
+					var preview = $.data( this, 'preview' ),
+						position = $item.data( 'offsetTop' );
+
+					scrollExtra = 0;
+
+					if( typeof preview != 'undefined' ) {
+
+						if( previewPos !== position ) {
+							if( position > previewPos ) {
+								scrollExtra = preview.height;
+							}
+							hidePreview();
+						}
+						else {
+							preview.update( $item );
+							return false;
+						}
+						
+					}
+
+					previewPos = position;
+					preview = $.data( this, 'preview', new Preview( $item ) );
+					preview.open();
+
+				}
+
+				function hidePreview() {
+					current = -1;
+					var preview = $.data( this, 'preview' );
+					preview.close();
+					$.removeData( this, 'preview' );
+				}
+
+				function Preview( $item ) {
+					this.$item = $item;
+					this.expandedIdx = Array.from($items).findIndex(d => d == this.$item[0]);
+					this.create();
+					this.update();
+				}
+
+				Preview.prototype = {
+					create : function() {
+						this.$title = $( '<h3></h3>' );
+						this.$description = $( '<p></p>' );
+						this.$href = $( '<a href="#" target="_blank">Read</a>' );
+						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+						this.$loading = $( '<div class="og-loading"></div>' );
+						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+						this.$closePreview = $( '<span class="og-close"></span>' );
+						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+						this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
+						this.$item.append( this.getEl() );
+						if( support ) {
+							this.setTransition();
+						}
+					},
+					update : function( $item ) {
+
+						if( $item ) {
+							this.$item = $item;
+						}
+						
+						if( current !== -1 ) {
+							var $currentItem = $items.eq( current );
+							$currentItem.removeClass( 'og-expanded' );
+							this.$item.addClass( 'og-expanded' );
+							this.positionPreview();
+						}
+
+						current = this.$item.index();
+
+						var $itemEl = this.$item.children( 'a' ),
+							eldata = {
+								href : $itemEl.attr( 'href' ),
+								largesrc : $itemEl.data( 'largesrc' ),
+								title : $itemEl.data( 'title' ),
+								description : $itemEl.data( 'description' ),
+								buttontext : $itemEl.data( 'buttontext' )
+							};
+
+						this.$title.html( eldata.title );
+						this.$description.html( eldata.description );
+						if(eldata.buttontext) this.$href.text(eldata.buttontext);
+						else this.$href.text("Read")
+
+						if (eldata.href) {
+							this.$href.attr( 'href', eldata.href );
+							this.$href.show();
+						}
+						else {
+							this.$href.hide();
+						}
+
+						var self = this;
+						
+						if( typeof self.$largeImg != 'undefined' ) {
+							self.$largeImg.remove();
+						}
+
+						if( self.$fullimage.is( ':visible' ) ) {
+							this.$loading.show();
+							$( '<img/>' ).load( function() {
+								var $img = $( this );
+								if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+									self.$loading.hide();
+									self.$fullimage.find( 'img' ).remove();
+									self.$largeImg = $img.fadeIn( 350 );
+									self.$fullimage.append( self.$largeImg );
+								}
+							} ).attr( 'src', eldata.largesrc );	
+						}
+
+					},
+					open : function() {
+
+						setTimeout( $.proxy( function() {	
+							this.setHeights();
+							this.positionPreview();
+						}, this ), 25 );
+
+					},
+					close : function() {
+
+						var self = this,
+							onEndFn = function() {
+								if( support ) {
+									$( this ).off( transEndEventName );
+								}
+								self.$item.removeClass( 'og-expanded' );
+								self.$previewEl.remove();
+							};
+
+						setTimeout( $.proxy( function() {
+
+							if( typeof this.$largeImg !== 'undefined' ) {
+								this.$largeImg.fadeOut( 'fast' );
+							}
+							this.$previewEl.css( 'height', 0 );
+							var $expandedItem = $items.eq( this.expandedIdx );
+							$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
+
+							if( !support ) {
+								onEndFn.call();
+							}
+
+						}, this ), 25 );
+						
+						return false;
+
+					},
+					calcHeight : function() {
+
+						var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
+							itemHeight = winsize.height;
+
+						if( heightPreview < settings.minHeight ) {
+							heightPreview = settings.minHeight;
+							itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+						}
+
+						this.height = heightPreview;
+						this.itemHeight = itemHeight;
+
+					},
+					setHeights : function() {
+
+						var self = this,
+							onEndFn = function() {
+								if( support ) {
+									self.$item.off( transEndEventName );
+								}
+								self.$item.addClass( 'og-expanded' );
+							};
+
+						this.calcHeight();
+						this.$previewEl.css( 'height', this.height );
+						this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+
+						if( !support ) {
+							onEndFn.call();
+						}
+
+					},
+					positionPreview : function() {
+
+						var position = this.$item.data( 'offsetTop' ),
+							previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+							scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+						
+						$body.animate( { scrollTop : scrollVal }, settings.speed );
+
+					},
+					setTransition  : function() {
+						this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+						this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+					},
+					getEl : function() {
+						return this.$previewEl;
+					}
+				}
+
+				return { 
+					init : init,
+					addItems : addItems
+				};
+
+			})();
+		</script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+
+	</body>
 </html>
