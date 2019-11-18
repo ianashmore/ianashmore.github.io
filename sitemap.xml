@@ -8,10 +8,4 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://ianashmore.github.io/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-
 </urlset>
